@@ -4,10 +4,28 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Insert Title Here</title>
+  <title>Derek Repka</title>
 
+<style>
 
-  <!-- <link rel="stylesheet" href="style.css"> -->
+body{
+	background-color: lightblue;
+}
+
+h1 {
+	color:white;
+	background-color: red;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 16px;
+	font-family: helvetica;
+	color:darkmagenta;
+}
+
+</style>
 
 </head>
 
@@ -21,7 +39,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
   $(window).on('load', function(){
-     // change the URL to your server URL here
      $.getJSON("http://162.246.157.227:8000/api/person/1/", function (data) {
           $("#name").text(data.data.attributes.name);
           $("#about").text(data.data.attributes.about);
@@ -29,12 +46,8 @@
           $("#skills").text(data.data.attributes.skills);
 	  $("#work").text(data.data.attributes.work);
 	  $("#contact").text(data.data.attributes.contact);
-          // Complete consuming the API data and updating the work and contact sections
-          // HINT: look at the above lines, jquery documentation, see what is the object returned
-     
-     
 
-     });
+	 });
   });
   </script>
 </body>
